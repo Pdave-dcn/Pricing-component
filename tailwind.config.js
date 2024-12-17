@@ -11,6 +11,7 @@ export default {
         "cust-discount": "hsl(15, 100%, 70%)",
         "cust-discount-bg": "hsl(14, 92%, 95%)",
         "cust-cta": "hsl(226, 100%, 87%)",
+        "cust-toggle-bg": "hsl(223, 50%, 87%)",
       },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],

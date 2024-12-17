@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,17 +23,22 @@
     </style>
   </head>
   <body
-    class="bg-custom-bg flex h-screen items-center justify-center font-manrope"
+    class="bg-custom-bg flex h-screen items-center justify-center font-manrope bg-[url(/images/bg-pattern.svg)] bg-no-repeat bg-top"
   >
     <main>
-      <div class="mb-20">
-        <h1 class="font-bold text-3xl text-dark-desat-blue">
+      <div class="mb-20 relative">
+        <div
+          class="absolute left-[225px] bottom-[40px] -z-50 w-full h-full bg-[url(/images/pattern-circles.svg)] bg-no-repeat"
+        ></div>
+        <h1 class="font-bold text-3xl text-dark-desat-blue text-center">
           Simple, traffic-based pricing
         </h1>
-        <p>Sign-up for our 30-day trial. No credit card required.</p>
+        <p class="text-center">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
       </div>
       <div
-        class="bg-pricing-comp-bg p-[25px] flex flex-col justify-center w-[600px]"
+        class="bg-pricing-comp-bg p-[40px] flex flex-col justify-center w-[600px] rounded-xl"
       >
         <div class="flex flex-col gap-[30px] mb-[50px]">
           <div class="flex justify-between items-center">
@@ -47,13 +52,36 @@
               >
             </div>
           </div>
-          <input type="range" aria-label="Slide bar" />
-          <div class="self-end mr-[20px]">
-            <span class="billing text-[0.9rem]">Monthly Billing</span>
-            <span class="billing text-[0.9rem]">Yearly Billing</span>
-            <span class="text-cust-discount bg-cust-discount-bg text-[0.9rem]"
-              >25% discount</span
+          <input type="range" class="slider" aria-label="Slide bar" />
+          <div class="flex gap-[17px] self-end mr-[20px]">
+            <span class="billing text-[0.8rem] font-semibold"
+              >Monthly Billing</span
             >
+            <div
+              class="flex m-auto bg-cust-toggle-bg py-[3px] px-[7px] rounded-2xl"
+            >
+              <input
+                type="radio"
+                name="toggle-btn"
+                id="toggle-active"
+                aria-label="Toggle radio button"
+                checked
+              />
+              <input
+                type="radio"
+                name="toggle-btn"
+                id="toggle-inactive"
+                aria-label="Toggle radio button"
+              />
+            </div>
+            <span class="billing text-[0.8rem] font-semibold"
+              >Yearly Billing</span
+            >
+            <div
+              class="text-cust-discount font-semibold bg-cust-discount-bg text-[0.7rem] m-auto px-[6px] rounded-2xl"
+            >
+              25% discount
+            </div>
           </div>
         </div>
         <div class="flex justify-between items-center">
