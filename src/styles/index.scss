@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.test-style {
-  font-size: 20px;
+body {
+  img {
+    width: 12px;
+    height: 12px;
+    margin-right: 13px;
+  }
+}
+
+p,
+.billing {
+  color: hsl(225, 20%, 60%);
 }
 
 .attribution {
