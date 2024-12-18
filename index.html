@@ -42,35 +42,44 @@
       >
         <div class="flex flex-col gap-[45px] mb-[50px]">
           <div class="flex justify-between items-center">
-            <p class="font-semibold tracking-wider">100K PAGEVIEWS</p>
+            <p class="font-semibold tracking-wider">
+              <span class="js-views-numbers">100</span>K PAGEVIEWS
+            </p>
             <div class="flex items-center">
               <span
-                class="text-4xl font-extrabold text-dark-desat-blue text-4xl"
+                class="text-4xl font-extrabold text-dark-desat-blue text-4xl js-cost"
                 >$16.00</span
               ><span class="text-grayish-blue font-semibold ml-[6px]"
                 >/ month</span
               >
             </div>
           </div>
-          <input type="range" class="slider" aria-label="Slide bar" />
+          <input
+            type="range"
+            min="1"
+            max="100"
+            class="slider js-slider"
+            aria-label="Slide bar"
+          />
           <div class="flex gap-[17px] self-end mr-[20px]">
             <span class="billing text-[0.8rem] font-semibold"
               >Monthly Billing</span
             >
             <div
-              class="flex m-auto bg-cust-toggle-bg hover:bg-cust-toggle-hvr py-[3px] px-[7px] rounded-2xl"
+              class="flex m-auto bg-cust-toggle-bg py-[3px] px-[7px] rounded-2xl js-toggle-wrapper"
             >
               <input
                 type="radio"
                 name="toggle-btn"
-                id="toggle-active"
+                id="monthly"
                 aria-label="Toggle radio button"
                 checked
               />
               <input
                 type="radio"
                 name="toggle-btn"
-                id="toggle-inactive"
+                id="yearly"
+                class="js-yearly"
                 aria-label="Toggle radio button"
               />
             </div>
@@ -101,7 +110,7 @@
           </div>
           <div>
             <button
-              class="text-cust-cta hover:text-white font-semibold bg-dark-desat-blue p-[9px] px-[50px] rounded-3xl text-[0.75rem]"
+              class="text-cust-cta active:text-white font-semibold bg-dark-desat-blue p-[9px] px-[50px] rounded-3xl text-[0.75rem] cta__animation"
             >
               Start my trial
             </button>
@@ -115,5 +124,6 @@
         >. Coded by <a href="#">Pdave-dcn</a>.
       </div>
     </main>
+    <script src="src/main.ts" type="module"></script>
   </body>
 </html>

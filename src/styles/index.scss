@@ -14,6 +14,23 @@
   background-color: white;
 }
 
+@mixin transition {
+  transition: all ease 300ms;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin animation-fadeIn {
+  animation: fade-in ease 350ms;
+}
+
 body {
   img {
     width: 12px;
@@ -32,9 +49,10 @@ p,
   appearance: none;
   width: 100%;
   height: 8px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   border-radius: 5px;
+  background-image: linear-gradient(hsl(174, 77%, 80%), hsl(224, 65%, 95%));
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -48,7 +66,8 @@ p,
     background-image: url(/images/icon-slider.svg);
     background-repeat: no-repeat;
     background-position: center;
-    transform: translate(-40%, -40%);
+    transform: translate(0%, -40%);
+    @include transition();
 
     &:hover {
       box-shadow: 0 15px 20px 3px hsl(174, 77%, 80%);
@@ -64,11 +83,6 @@ p,
     width: 100%;
     height: 8px;
     border-radius: 5px;
-    background: linear-gradient(
-      to right,
-      hsl(174, 77%, 80%) 50%,
-      hsl(224, 65%, 95%) 0%
-    );
   }
 }
 
@@ -82,14 +96,24 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-#toggle-active:checked::before {
+#monthly:checked::before {
   @include toggle-btns-configs();
   transform: translate(-18%, -5%);
+  @include animation-fadeIn();
 }
 
-#toggle-inactive:checked::before {
+#yearly:checked::before {
   @include toggle-btns-configs();
   transform: translate(12%, -5%);
+  @include animation-fadeIn();
+}
+
+.cta__animation {
+  @include transition();
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .attribution {
