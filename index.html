@@ -43,12 +43,12 @@
         <div class="flex flex-col gap-[45px] mb-[50px]">
           <div class="flex justify-between items-center">
             <p class="font-semibold tracking-wider">
-              <span class="js-views-numbers">100</span>K PAGEVIEWS
+              <span class="js-views-numbers"></span> PAGEVIEWS
             </p>
             <div class="flex items-center">
               <span
                 class="text-4xl font-extrabold text-dark-desat-blue text-4xl js-cost"
-                >$16.00</span
+              ></span
               ><span class="text-grayish-blue font-semibold ml-[6px]"
                 >/ month</span
               >
@@ -56,8 +56,9 @@
           </div>
           <input
             type="range"
-            min="1"
+            min="0"
             max="100"
+            step="10"
             class="slider js-slider"
             aria-label="Slide bar"
           />
@@ -72,6 +73,7 @@
                 type="radio"
                 name="toggle-btn"
                 id="monthly"
+                class="js-monthly"
                 aria-label="Toggle radio button"
                 checked
               />
