@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="overflow-x-hidden" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,35 +23,46 @@
     </style>
   </head>
   <body
-    class="bg-custom-bg flex h-screen items-center justify-center font-manrope bg-[url(/images/bg-pattern.svg)] bg-no-repeat bg-top"
+    class="bg-custom-bg flex sm:h-screen items-center justify-center font-manrope bg-[url(/images/bg-pattern.svg)] bg-no-repeat bg-top overflow-x-hidden"
   >
     <main>
-      <div class="mb-20 relative">
+      <div
+        class="flex flex-col items-center mt-14 mb-14 sm:mb-20 relative w-[400px] sm:w-[600px]"
+      >
         <div
-          class="absolute left-[225px] bottom-[40px] -z-50 w-full h-full bg-[url(/images/pattern-circles.svg)] bg-no-repeat"
+          class="absolute left-[125px] sm:left-[225px] bottom-[40px] -z-50 w-full h-full bg-[url(/images/pattern-circles.svg)] bg-no-repeat"
         ></div>
-        <h1 class="font-bold text-3xl text-dark-desat-blue text-center">
+        <h1
+          class="font-bold text-2xl sm:text-3xl text-dark-desat-blue text-center"
+        >
           Simple, traffic-based pricing
         </h1>
-        <p class="text-center">
+        <p class="text-center w-[220px] sm:w-[600px]">
           Sign-up for our 30-day trial. No credit card required.
         </p>
       </div>
       <div
-        class="bg-pricing-comp-bg p-[40px] flex flex-col justify-center w-[600px] rounded-xl"
+        class="relative flex flex-col justify-center w-[400px] h-[283px] sm:h-auto p-[25px] bg-pricing-comp-bg rounded-xl shadow-xl sm:p-[40px] sm:w-[600px]"
       >
-        <div class="flex flex-col gap-[45px] mb-[50px]">
-          <div class="flex justify-between items-center">
-            <p class="font-semibold tracking-wider">
-              <span class="js-views-numbers"></span> PAGEVIEWS
-            </p>
-            <div class="flex items-center">
-              <span
-                class="text-4xl font-extrabold text-dark-desat-blue text-4xl js-cost"
-              ></span
-              ><span class="text-grayish-blue font-semibold ml-[6px]"
-                >/ month</span
+        <div
+          class="flex flex-col mt-[-50px] sm:mt-0 gap-[35px] sm:gap-[45px] sm:mb-[50px]"
+        >
+          <div class="self-center relative sm:self-stretch">
+            <div class="flex sm:justify-between sm:items-center">
+              <p class="font-semibold tracking-wider">
+                <span class="js-views-numbers"></span> PAGEVIEWS
+              </p>
+              <div
+                class="flex items-center absolute top-[100px] left-[-20px] sm:flex sm:static"
               >
+                <span
+                  class="text-4xl font-extrabold text-dark-desat-blue text-2xl sm:text-4xl js-cost"
+                ></span
+                ><span
+                  class="flex items-center text-grayish-blue font-semibold ml-[6px]"
+                  >/month</span
+                >
+              </div>
             </div>
           </div>
           <input
@@ -62,7 +73,9 @@
             class="slider js-slider"
             aria-label="Slide bar"
           />
-          <div class="flex gap-[17px] self-end mr-[20px]">
+          <div
+            class="flex gap-[17px] self-end items-center mr-[20px] pt-[75px] sm:pt-0"
+          >
             <span class="billing text-[0.8rem] font-semibold"
               >Monthly Billing</span
             >
@@ -91,12 +104,16 @@
             <div
               class="text-cust-discount font-semibold bg-cust-discount-bg text-[0.7rem] m-auto px-[6px] rounded-2xl"
             >
-              25% discount
+              25% <span class="hidden sm:inline-block">discount</span>
             </div>
           </div>
         </div>
-        <div class="flex justify-between items-center">
-          <div class="flex flex-col gap-[12px]">
+        <div
+          class="absolute sm:static top-[290px] rounded-xl left-0 bg-white sm:bg-white/[0] p-[25px] sm:p-0 w-[400px] sm:w-auto flex flex-col items-center shadow-xl sm:shadow-none sm:flex-row sm:justify-between sm:items-center"
+        >
+          <div
+            class="flex flex-col items-center sm:items-start mb-[25px] sm:mb-0 gap-[12px]"
+          >
             <div class="flex items-center">
               <img src="images/icon-check.svg" alt="Check icon" />
               <p class="text-[0.75rem]">Unlimited websites</p>
@@ -119,11 +136,16 @@
           </div>
         </div>
       </div>
-      <div class="attribution">
+      <div
+        class="mt-[230px] sm:mt-[30px] mb-[20px] sm:mb-[0] text-center text-[11px]"
+      >
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          class="text-cust-link-col"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Pdave-dcn</a>.
+        >. Coded by <a class="text-cust-link-col" href="#">Pdave-dcn</a>.
       </div>
     </main>
     <script src="src/main.ts" type="module"></script>
