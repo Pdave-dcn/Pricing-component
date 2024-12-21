@@ -1,24 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "target": "esnext", // Modern JavaScript
+    "module": "esnext", // Use ES modules
+    "moduleResolution": "node", // Node-style resolution
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Allow default imports from modules without a default export
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
+    "outDir": "./dist", // Output directory for compiled JS files
+    "rootDir": "./src" // Root directory for source files
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*.ts" // Include all TypeScript files in the 'src' folder
+  ],
+  "exclude": [
+    "node_modules" // Exclude node_modules from compilation
+  ]
 }
